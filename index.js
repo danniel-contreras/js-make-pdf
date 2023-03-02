@@ -11,12 +11,12 @@ app.use(
   cors({
     origin: [
       "https://afraco-admin-app-5sl9b.ondigitalocean.app",
-      "http://localhost:5173",
+      "http://10.0.5.3:5173",
     ],
   })
 );
 
-app.use(router);
+app.use("/reports",router);
 
 app.listen(3004, () => {
   console.log("app running at port 3004");
