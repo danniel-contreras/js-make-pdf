@@ -21,7 +21,7 @@ const make_header = (title) => {
     </head>
     <body class="h-screen p-5" style="page-break-after:always;height:100vh !important;">
         <div class="grid grid-cols-2">
-        <div>El Sotano - ${title}</div>
+        <div class="whitespaces-nowrap text-lg font-semibold">El Sotano - ${title}</div>
         <div>
             <img class="w-20 float-right" src="https://i.ibb.co/FhVFR6H/logo.png">
         </div>
