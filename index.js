@@ -12,6 +12,7 @@ app.use(
     origin: [
       "https://afraco-admin-app-5sl9b.ondigitalocean.app",
       "http://10.0.5.3:5173",
+      "http://localhost:5175",
     ],
   })
 );
