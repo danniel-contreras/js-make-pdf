@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const { router } = require("./src/routes/router");
+require("dotenv").config()
 
 const app = express();
 
@@ -15,6 +16,6 @@ app.use(
 
 app.use("/reports", router);
 
-app.listen(3004, () => {
-  console.log("app running at port 3004");
+app.listen(process.env.PORT, () => {
+  console.log("app running at port: ",process.env.PORT);
 });
