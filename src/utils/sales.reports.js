@@ -256,7 +256,7 @@ const generate_sales_report = async (data) => {
   const _sales = new RSales();
   let options = {
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
-    timeout: 0,
+    timeout: 120000,
   };
 
   let file = {
@@ -268,7 +268,7 @@ const generate_sales_report = async (data) => {
       `,
   };
 
-  const result = generatePdf(file, { ...options, format: "A4" })
+  const result = generatePdf(file, { ...options, format: "A4",timeout: 120000 })
     .then((pdfBuffer) => {
       return pdfBuffer.toString("base64");
     })
