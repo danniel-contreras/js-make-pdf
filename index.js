@@ -9,16 +9,11 @@ app.use(express.urlencoded({ limit: "50mb", extended: true }));
 
 app.use(
   cors({
-    origin: [
-      "https://afraco-admin-app-5sl9b.ondigitalocean.app",
-      "http://10.0.5.3:5173",
-      "http://localhost:5175",
-      "http://localhost:5174",
-    ],
+    origin: "*",
   })
 );
 
-app.use("/reports",router);
+app.use("/reports", router);
 
 app.listen(3004, () => {
   console.log("app running at port 3004");
